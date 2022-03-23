@@ -1,17 +1,21 @@
 <template>
-  <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </nav>
-  <router-view />
-
-  <div class="justify-center flex bg-yellow-300 items-center h-screen">
-    <div class="text-4xl">Hello 👋🏼</div>
-  </div>
+  <component :is="layout" />
 </template>
 
 <script>
+import AuthLayout from "@/layouts/AuthLayout.vue"
+import MainLayout from "@/layouts/MainLayout.vue"
+import EmptyLayout from "@/layouts/EmptyLayout.vue"
+
 export default {
   name: "App",
-};
+  computed: {
+    layout() {
+      return (this.$route.meta.layout || "Empty") + "Layout"
+    }
+  },
+  components: {
+    AuthLayout, MainLayout, EmptyLayout
+  }
+}
 </script>
