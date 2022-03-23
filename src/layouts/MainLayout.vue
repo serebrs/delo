@@ -40,7 +40,7 @@
           </a>
         </router-link>
 
-        <router-link to="/documents">
+        <router-link to="/tasks">
           <a
             class="text-gray-400 flex flex-col rounded-md items-center p-2 m-3 transition-colors duration-200 justify-center hover:text-gray-300 hover:bg-gray-600"
             href="#"
@@ -64,26 +64,28 @@
           </a>
         </router-link>
 
-        <a
-          class="text-gray-400 flex flex-col rounded-md items-center p-2 m-3 transition-colors duration-200 justify-center hover:text-gray-300 hover:bg-gray-600"
-          href="#"
-        >
-          <span class="text-left">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              class="h-4 w-4"
-              viewBox="0 0 20 20"
-              fill="currentColor"
-            >
-              <path
-                fill-rule="evenodd"
-                d="M5 3a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2V5a2 2 0 00-2-2H5zm9 4a1 1 0 10-2 0v6a1 1 0 102 0V7zm-3 2a1 1 0 10-2 0v4a1 1 0 102 0V9zm-3 3a1 1 0 10-2 0v1a1 1 0 102 0v-1z"
-                clip-rule="evenodd"
-              />
-            </svg>
-          </span>
-          <span class="mx-4 text-xs font-normal">Статистика</span>
-        </a>
+        <router-link to="/tasks">
+          <a
+            class="text-gray-400 flex flex-col rounded-md items-center p-2 m-3 transition-colors duration-200 justify-center hover:text-gray-300 hover:bg-gray-600"
+            href="#"
+          >
+            <span class="text-left">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-4 w-4"
+                viewBox="0 0 20 20"
+                fill="currentColor"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M5 3a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2V5a2 2 0 00-2-2H5zm9 4a1 1 0 10-2 0v6a1 1 0 102 0V7zm-3 2a1 1 0 10-2 0v4a1 1 0 102 0V9zm-3 3a1 1 0 10-2 0v1a1 1 0 102 0v-1z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+            </span>
+            <span class="mx-4 text-xs font-normal">Статистика</span>
+          </a>
+        </router-link>
       </nav>
     </div>
 
@@ -109,7 +111,7 @@
           </div>
 
           <div>
-            <h1 class="text-gray-600 text-2xl font-semibold">Документы</h1>
+            <h1 class="text-gray-600 text-2xl font-semibold">{{ title }}</h1>
           </div>
         </div>
 
@@ -163,7 +165,7 @@
 
             <!-- Выпадающее меню -->
             <div
-              class="origin-top-right absolute right-0 py-1 mt-2 w-32 rounded-md shadow-md bg-white ring-1 ring-black ring-opacity-5"
+              class="z-50 origin-top-right absolute right-0 py-1 mt-2 w-32 rounded-md shadow-md bg-white ring-1 ring-black ring-opacity-5"
               role="menu"
               aria-orientation="vertical"
               aria-labelledby="options-menu"
@@ -231,6 +233,10 @@
 
 <script>
 export default {
-
+  computed: {
+    title() {
+      return this.$route.meta.title || "";
+    }
+  }
 }
 </script>

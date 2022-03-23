@@ -16,13 +16,13 @@ const routes = [
   {
     path: "/documents",
     name: "documents",
-    meta: { layout: "Main" },
+    meta: { layout: "Main", title: "Документы" },
     component: () => import(/* webpackChunkName: "documents" */ "../views/DocumentsView.vue"),
   },
   {
     path: "/tasks",
     name: "tasks",
-    meta: { layout: "Main" },
+    meta: { layout: "Main", title: "Задачи" },
     component: () => import(/* webpackChunkName: "tasks" */ "../views/TasksView.vue"),
   }
 ];
