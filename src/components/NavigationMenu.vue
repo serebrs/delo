@@ -8,9 +8,7 @@
 </template>
 
 <script>
-import { ChartSquareBarIcon } from "@heroicons/vue/solid";
-import { ClipboardCheckIcon } from "@heroicons/vue/solid";
-import { DocumentTextIcon } from "@heroicons/vue/solid";
+import { ChartSquareBarIcon, ClipboardCheckIcon, DocumentTextIcon } from "@heroicons/vue/solid";
 
 export default {
   data() {
