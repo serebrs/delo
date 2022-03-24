@@ -17,7 +17,7 @@
       <div class="bg-gray-600 mt-8 w-8 h-[0.1rem] mx-auto"></div>
 
       <nav class="mt-7">
-        <router-link to="/documents">
+        <router-link to="/documents"> <!-- TODO убрать A -->
           <a
             class="text-gray-300 flex flex-col rounded-md items-center justify-center p-2 m-3 transition-colors duration-200 bg-gray-600"
             href="#"
@@ -40,7 +40,7 @@
           </a>
         </router-link>
 
-        <router-link to="/tasks">
+        <router-link to="/tasks"> <!-- TODO убрать A -->
           <a
             class="text-gray-400 flex flex-col rounded-md items-center p-2 m-3 transition-colors duration-200 justify-center hover:text-gray-300 hover:bg-gray-600"
             href="#"
@@ -64,7 +64,7 @@
           </a>
         </router-link>
 
-        <router-link to="/tasks">
+        <router-link to="/stats"> <!-- TODO убрать A -->
           <a
             class="text-gray-400 flex flex-col rounded-md items-center p-2 m-3 transition-colors duration-200 justify-center hover:text-gray-300 hover:bg-gray-600"
             href="#"
@@ -91,7 +91,7 @@
 
     <!-- Основной блок справа с заголовком и основным контентом -->
     <div class="flex-grow shrink-0 w-[58rem]">
-      <header class="w-full mt-1 h-16 z-40 flex items-center justify-between">
+      <header class="w-full mt-1 mb-4 h-16 z-40 flex items-center justify-between">
         <div class="flex mx-6">
           <div class="block lg:hidden mr-6">
             <button class="p-2 rounded-full bg-white shadow text-gray-500 text-md">
