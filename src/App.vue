@@ -3,9 +3,9 @@
 </template>
 
 <script>
-import AuthLayout from "@/layouts/AuthLayout.vue"
-import MainLayout from "@/layouts/MainLayout.vue"
-import EmptyLayout from "@/layouts/EmptyLayout.vue"
+import AuthLayout from "@/layouts/AuthLayout.vue";
+import MainLayout from "@/layouts/MainLayout.vue";
+import EmptyLayout from "@/layouts/EmptyLayout.vue";
 
 export default {
   name: "App",

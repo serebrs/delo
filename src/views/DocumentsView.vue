@@ -1,10 +1,9 @@
 <template>
-  <div class="overflow-auto h-screen pb-24 px-6">
+  <main class="overflow-auto h-screen pb-24 px-6">
     <!-- Блок фильтров для поиска документов -->
     <div
       class="w-[55rem] flex flex-row justify-start items-center space-x-4 px-4 pt-2 pb-4 mb-6 overflow-hidden shadow-sm shadow-slate-300 bg-slate-200 rounded-lg"
     >
-
       <label class="block">
         <span class="text-gray-600 text-xs font-semibold mb-1">Тип</span>
         <select
@@ -323,11 +322,11 @@
         </tbody>
       </table>
     </div>
-  </div>
+  </main>
 </template>
 
 <script>
 export default {
-  
+
 }
 </script>

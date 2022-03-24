@@ -1,5 +1,5 @@
 <template>
-  <div class="overflow-auto h-screen pb-24 px-6">
+  <main class="overflow-auto h-screen pb-24 px-6">
     <!-- Блок с таблицей документов //min-w-[54rem]// -->
     <div class="overflow-clip shadow-sm shadow-slate-200 rounded-lg">
       <table class>
@@ -180,11 +180,10 @@
               </div>
             </td>
           </tr>
-          
         </tbody>
       </table>
     </div>
-  </div>
+  </main>
 </template>
 
 <script>
