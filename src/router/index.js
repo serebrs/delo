@@ -24,6 +24,12 @@ const routes = [
     name: "tasks",
     meta: { layout: "Main", title: "Задачи" },
     component: () => import(/* webpackChunkName: "tasks" */ "../views/TasksView.vue"),
+  },
+  {
+    path: "/stats",
+    name: "stats",
+    meta: { layout: "Main", title: "Статистика" },
+    component: () => import(/* webpackChunkName: "tasks" */ "../views/StatsView.vue"),
   }
 ];
 
