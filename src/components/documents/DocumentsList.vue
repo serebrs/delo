@@ -1,37 +1,39 @@
 <template>
-  <table>
-    <thead class="bg-slate-200 sticky top-0 shadow-sm shadow-slate-300">
-      <tr>
-        <th
-          scope="col"
-          class="px-3 pl-6 py-3 text-left text-xs font-medium text-slate-900 uppercase"
-        >Тип</th>
-        <th
-          scope="col"
-          class="px-3 py-3 text-left text-xs font-medium text-slate-900 uppercase"
-        >Номер</th>
-        <th
-          scope="col"
-          class="px-3 py-3 text-left text-xs font-medium text-slate-900 uppercase"
-        >Дата</th>
-        <th
-          scope="col"
-          class="px-3 py-3 text-left text-xs font-medium text-slate-900 uppercase w-full"
-        >Содержание</th>
-        <th
-          scope="col"
-          class="px-3 py-3 text-left text-xs font-medium text-slate-900 uppercase"
-        >Ответственные</th>
-        <th
-          scope="col"
-          class="px-3 py-3 text-center text-xs font-medium text-slate-900 uppercase"
-        >Операция</th>
-      </tr>
-    </thead>
-    <tbody>
-      <DocumentsListItem v-for="item in documents" :item="item" :key="item.id" />
-    </tbody>
-  </table>
+  <div class="overflow-clip shadow-sm shadow-slate-200 rounded-lg">
+    <table>
+      <thead class="bg-slate-200 sticky top-0 shadow-sm shadow-slate-300">
+        <tr>
+          <th
+            scope="col"
+            class="px-3 pl-6 py-3 text-left text-xs font-medium text-slate-900 uppercase"
+          >Тип</th>
+          <th
+            scope="col"
+            class="px-3 py-3 text-left text-xs font-medium text-slate-900 uppercase"
+          >Номер</th>
+          <th
+            scope="col"
+            class="px-3 py-3 text-left text-xs font-medium text-slate-900 uppercase"
+          >Дата</th>
+          <th
+            scope="col"
+            class="px-3 py-3 text-left text-xs font-medium text-slate-900 uppercase w-full"
+          >Содержание</th>
+          <th
+            scope="col"
+            class="px-3 py-3 text-left text-xs font-medium text-slate-900 uppercase"
+          >Ответственные</th>
+          <th
+            scope="col"
+            class="px-3 py-3 text-center text-xs font-medium text-slate-900 uppercase"
+          >Операция</th>
+        </tr>
+      </thead>
+      <tbody>
+        <DocumentsListItem v-for="item in documents" :item="item" :key="item.id" />
+      </tbody>
+    </table>
+  </div>
 </template>
 
 <script>
