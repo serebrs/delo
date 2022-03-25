@@ -1,14 +1,14 @@
 <template>
   <main class="overflow-auto h-screen pb-24 px-6">
-    <DocumentsFilterBlock />
+    <DocumentsFilters />
     <DocumentsList />
   </main>
 </template>
 
 <script>
 import DocumentsList from "@/components/documents/DocumentsList.vue";
-import DocumentsFilterBlock from "@/components/documents/DocumentsFilterBlock.vue";
+import DocumentsFilters from "@/components/documents/DocumentsFilters.vue";
 export default {
-  components: { DocumentsList, DocumentsFilterBlock }
+  components: { DocumentsList, DocumentsFilters }
 }
 </script>

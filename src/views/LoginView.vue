@@ -1,5 +1,4 @@
 <template>
-  <router-link to="/documents">Документы</router-link>
   <form>
     <div class="bg-white shadow py-5 px-6 rounded-lg">
       <div>
@@ -73,6 +72,6 @@
 
 <script>
 export default {
-  
+
 }
 </script>

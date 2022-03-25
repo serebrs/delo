@@ -4,16 +4,7 @@
   >
     <!-- Основной блок слева с навигационным меню -->
     <div class="flex-none h-screen hidden lg:block lg:w-28 shadow-lg bg-gray-700 shadow-gray-500">
-      <div class="flex items-center justify-center pt-8">
-        <span class="relative">
-          <span
-            class="block absolute -inset-1 -skew-y-3 bg-sky-700 shadow-md shadow-gray-700"
-            aria-hidden="true"
-          ></span>
-          <span class="relative text-white font-semibold font-mono text-xl px-1">Дело</span>
-        </span>
-      </div>
-      <div class="bg-gray-600 mt-8 w-8 h-[0.1rem] mx-auto"></div>
+      <LogoImage />
       <NavigationMenu class="mt-7" />
     </div>
 
@@ -28,6 +19,7 @@
 <script>
 import NavigationMenu from "@/components/NavigationMenu.vue";
 import HeaderMenu from "@/components/HeaderMenu.vue";
+import LogoImage from "@/components/LogoImage.vue";
 export default {
   computed: {
     title() {
@@ -35,7 +27,7 @@ export default {
     }
   },
   components: {
-    NavigationMenu, HeaderMenu
+    NavigationMenu, HeaderMenu, LogoImage
   }
 }
 </script>

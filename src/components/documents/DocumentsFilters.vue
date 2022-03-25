@@ -3,7 +3,7 @@
     <label class="block">
       <span class="text-gray-600 text-xs font-semibold mb-1">Тип</span>
       <select
-        class="text-xs leading-5 mt-1 px-3 py-1 pr-7 block w-full rounded-md bg-white shadow-sm focus:border-sky-300 focus:ring focus:ring-sky-200 focus:ring-opacity-50"
+        class="text-xs leading-5 mt-1 px-3 py-1 pr-7 block w-full rounded-md bg-white border border-gray-300 shadow-sm focus:border-sky-300 focus:ring focus:ring-sky-200 focus:ring-opacity-50"
       >
         <option selected>Все</option>
         <option>Норм. акт</option>
@@ -19,7 +19,7 @@
       <span class="text-gray-600 text-xs font-semibold mb-1">Дата c:</span>
       <input
         type="date"
-        class="text-xs leading-5 mt-1 px-3 py-1 block w-full rounded-md bg-white shadow-sm focus:border-sky-300 focus:ring focus:ring-sky-200 focus:ring-opacity-50"
+        class="text-xs leading-5 mt-1 px-3 py-1 block w-full rounded-md bg-white border border-gray-300 shadow-sm focus:border-sky-300 focus:ring focus:ring-sky-200 focus:ring-opacity-50"
       />
     </label>
 
@@ -27,7 +27,7 @@
       <span class="text-gray-600 text-xs font-semibold mb-1">Дата по:</span>
       <input
         type="date"
-        class="text-xs leading-5 mt-1 px-3 py-1 block w-full rounded-md bg-white shadow-sm focus:border-sky-300 focus:ring focus:ring-sky-200 focus:ring-opacity-50"
+        class="text-xs leading-5 mt-1 px-3 py-1 block w-full rounded-md bg-white border border-gray-300 shadow-sm focus:border-sky-300 focus:ring focus:ring-sky-200 focus:ring-opacity-50"
         value="2022-03-22"
       />
     </label>
@@ -37,14 +37,14 @@
       <input
         v-model.trim="content"
         type="text"
-        class="text-xs leading-5 mt-1 px-3 py-1 block w-full rounded-md bg-white shadow-sm focus:border-sky-300 focus:ring focus:ring-sky-200 focus:ring-opacity-50"
+        class="text-xs leading-5 mt-1 px-3 py-1 block w-full rounded-md bg-white border border-gray-300 shadow-sm focus:border-sky-300 focus:ring focus:ring-sky-200 focus:ring-opacity-50"
       />
     </label>
 
     <label class="block">
       <span class="text-gray-600 text-xs font-semibold mb-1">Ответственные</span>
       <select
-        class="text-xs leading-5 w-full mt-1 px-3 py-1 pr-7 block rounded-md bg-white shadow-sm focus:border-sky-300 focus:ring focus:ring-sky-200 focus:ring-opacity-50"
+        class="text-xs leading-5 w-full mt-1 px-3 py-1 pr-7 block rounded-md bg-white border border-gray-300 shadow-sm focus:border-sky-300 focus:ring focus:ring-sky-200 focus:ring-opacity-50"
       >
         <option selected>Все</option>
         <option>Иванов И.И.</option>

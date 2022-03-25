@@ -1,5 +1,5 @@
 <template>
-  <tr class="odd:bg-white even:bg-slate-50 hover:bg-sky-50 hover:ring-1 hover:ring-inset hover:ring-sky-200">
+  <tr class="odd:bg-white even:bg-slate-50 hover:bg-sky-50 hover:ring-1 hover:ring-inset hover:ring-sky-100">
     <td class="px-3 pl-6 py-2 whitespace-nowrap text-sm text-slate-600">
       <component :is="icon" class="h-5 w-5" />
     </td>
