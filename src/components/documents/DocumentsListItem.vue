@@ -1,7 +1,11 @@
 <template>
-  <tr class="odd:bg-white even:bg-slate-50 hover:bg-sky-50 hover:ring-1 hover:ring-inset hover:ring-sky-100">
+  <tr
+    class="odd:bg-white even:bg-slate-50 hover:bg-sky-50 hover:ring-1 hover:ring-inset hover:ring-sky-100"
+  >
     <td class="px-3 pl-6 py-2 whitespace-nowrap text-sm text-slate-600">
-      <component :is="icon" class="h-5 w-5" />
+      <HintBox :hintText="hintText">
+        <component :is="icon" class="h-5 w-5" />
+      </HintBox>
     </td>
     <td class="px-3 py-2 whitespace-nowrap text-sm text-slate-600">{{ item.num }}</td>
     <td class="px-3 py-2 whitespace-nowrap text-sm text-slate-600">{{ item.date }}</td>
@@ -29,10 +33,16 @@
 
 <script>
 import { InboxInIcon, ExternalLinkIcon, DocumentTextIcon, DocumentDuplicateIcon, DocumentIcon, PencilIcon, SwitchVerticalIcon, TrashIcon } from "@heroicons/vue/solid";
+import HintBox from "@/components/utils/HintBox.vue";
 
 export default {
   props: {
     item: Object
+  },
+  data() {
+    return {
+      
+    }
   },
   computed: {
     icon() {
@@ -44,10 +54,28 @@ export default {
         case "dogovor": return "DocumentDuplicateIcon";
         default: return "DocumentIcon";
       }
-    }
+    },
+    hintText() {
+      switch (this.item.type) {
+        case "in": return "Входящий";
+        case "out": return "Исходящий";
+        case "norm": return "Нормативный";
+        case "konkurs": return "Конкурсная";
+        case "dogovor": return "Договор";
+        default: return "Иной";
+      }
+    }   
   },
   components: {
-    InboxInIcon, ExternalLinkIcon, DocumentTextIcon, DocumentDuplicateIcon, DocumentIcon, PencilIcon, SwitchVerticalIcon, TrashIcon
+    InboxInIcon,
+    ExternalLinkIcon,
+    DocumentTextIcon,
+    DocumentDuplicateIcon,
+    DocumentIcon,
+    PencilIcon,
+    SwitchVerticalIcon,
+    TrashIcon,
+    HintBox
   }
 }
 </script>
