@@ -10,7 +10,7 @@
 
     <!-- Основной блок справа с заголовком и основным контентом -->
     <div class="flex-grow shrink-0 w-[58rem]">
-      <HeaderMenu :title="title" />
+      <HeaderBar :title="title" />
       <router-view />
     </div>
   </div>
@@ -18,7 +18,7 @@
 
 <script>
 import NavigationMenu from "@/components/NavigationMenu.vue";
-import HeaderMenu from "@/components/HeaderMenu.vue";
+import HeaderBar from "@/components/HeaderBar.vue";
 import LogoImage from "@/components/LogoImage.vue";
 export default {
   computed: {
@@ -27,7 +27,7 @@ export default {
     }
   },
   components: {
-    NavigationMenu, HeaderMenu, LogoImage
+    NavigationMenu, HeaderBar, LogoImage
   }
 }
 </script>
