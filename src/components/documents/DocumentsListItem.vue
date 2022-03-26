@@ -3,8 +3,8 @@
     class="odd:bg-white even:bg-slate-50 hover:bg-sky-50 hover:ring-1 hover:ring-inset hover:ring-sky-100"
   >
     <td class="px-3 pl-6 py-2 whitespace-nowrap text-sm text-slate-600">
-      <HintBox :hintText="hintText">
-        <component :is="icon" class="h-5 w-5" />
+      <HintBox :hintText="itemMeta.hintText">
+        <component :is="itemMeta.icon" class="h-5 w-5" />
       </HintBox>
     </td>
     <td class="px-3 py-2 whitespace-nowrap text-sm text-slate-600">{{ item.num }}</td>
@@ -41,30 +41,26 @@ export default {
   },
   data() {
     return {
-      
+
     }
   },
   computed: {
-    icon() {
+    itemMeta() {
       switch (this.item.type) {
-        case "in": return "InboxInIcon";
-        case "out": return "ExternalLinkIcon";
-        case "norm": return "DocumentTextIcon";
-        case "konkurs": return "DocumentDuplicateIcon";
-        case "dogovor": return "DocumentDuplicateIcon";
-        default: return "DocumentIcon";
+        case "in":
+          return { hintText: "Входящий", icon: "InboxInIcon" };
+        case "out":
+          return { hintText: "Исходящий", icon: "ExternalLinkIcon" };
+        case "norm":
+          return { hintText: "Нормативный", icon: "DocumentTextIcon" };
+        case "konkurs":
+          return { hintText: "Конкурсная", icon: "DocumentDuplicateIcon" };
+        case "dogovor":
+          return { hintText: "Договор", icon: "DocumentDuplicateIcon" };
+        default:
+          return { hintText: "Иной", icon: "DocumentIcon" };
       }
-    },
-    hintText() {
-      switch (this.item.type) {
-        case "in": return "Входящий";
-        case "out": return "Исходящий";
-        case "norm": return "Нормативный";
-        case "konkurs": return "Конкурсная";
-        case "dogovor": return "Договор";
-        default: return "Иной";
-      }
-    }   
+    }
   },
   components: {
     InboxInIcon,
