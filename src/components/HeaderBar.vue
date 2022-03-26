@@ -24,8 +24,6 @@
         class="object-cover rounded-full h-9 w-9"
       />
 
-      <!-- Dropdown menu -->
-
       <DropdownMenu>
         <button
           class="text-gray-500 hover:text-black text-sm px-5 py-2 rounded-full bg-white shadow active:translate-y-[1px]"
