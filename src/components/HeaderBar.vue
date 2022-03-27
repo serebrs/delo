@@ -2,7 +2,10 @@
   <header class="w-full mt-1 mb-4 h-16 z-40 flex items-center justify-between px-6">
     <div class="flex mr-6">
       <div class="block lg:hidden mr-6">
-        <button class="p-2 rounded-full bg-white shadow text-gray-500 text-md">
+        <button
+          @click="$emit('navMenuOpen')"
+          class="p-2 rounded-full bg-white shadow text-gray-500 text-md active:translate-y-[1px]"
+        >
           <MenuIcon class="w-5 h-5" />
         </button>
       </div>
@@ -42,9 +45,12 @@ import { MenuIcon, PlusIcon, ChevronDownIcon } from "@heroicons/vue/solid";
 import DropdownMenu from "./utils/DropdownMenu.vue";
 
 export default {
+  emits: [
+    "navMenuOpen"
+  ],
   props: {
     title: String
-  },
+  },  
   components: {
     MenuIcon,
     PlusIcon,

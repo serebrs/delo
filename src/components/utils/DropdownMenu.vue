@@ -55,7 +55,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 .drop-enter-active,
 .drop-leave-active {
   transition: opacity 0.3s ease;

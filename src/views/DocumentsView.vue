@@ -1,7 +1,7 @@
 <template>
   <main class="overflow-auto h-screen pb-24 px-6">
     <DocumentsFilters @filtersUpdate="updateDocumentsList" />
-    <div>{{ filtersContent }}</div> // TODO убрать
+    <div>{{ filtersContent }}</div>
     <DocumentsList />
   </main>
 </template>
