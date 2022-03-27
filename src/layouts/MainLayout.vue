@@ -3,7 +3,7 @@
     class="bg-gray-100 dark:bg-gray-800 h-screen overflow-y-hidden overflow-x-auto relative flex items-start justify-start flex-nowrap"
   >
     <!-- Основной блок слева с навигационным меню -->
-    <div class="flex-none h-screen hidden lg:block lg:w-28 shadow-lg bg-gray-700 shadow-gray-500">
+    <div class="flex-none h-screen hidden lg:block lg:w-28 shadow-lg bg-gray-700 shadow-gray-500 select-none">
       <LogoImage />
       <NavigationMenu :navLinks="navLinks" />
     </div>
@@ -12,7 +12,7 @@
       <div
         v-show="isNavigationActive"
         @mouseleave="isNavigationActive = false"
-        class="absolute z-20 left-0 top-0 h-screen w-28 flex flex-col shadow-lg bg-gray-700 shadow-gray-500"
+        class="absolute z-20 left-0 top-0 h-screen w-28 flex flex-col shadow-lg bg-gray-700 shadow-gray-500 select-none"
       >
         <a
           href="#"

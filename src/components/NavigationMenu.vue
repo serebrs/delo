@@ -1,5 +1,5 @@
 <template>
-  <nav id="nav-menu" class="mt-7">
+  <nav id="nav-menu" class="mt-7 select-none">
     <router-link
       v-for="link in navLinks"
       :key="link.id"
