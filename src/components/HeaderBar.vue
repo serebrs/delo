@@ -14,6 +14,7 @@
 
     <div class="mx-4 h-16 flex items-center justify-end space-x-4">
       <button
+        @click="$emit('modalOpen')"
         class="flex p-2 items-center rounded-full text-gray-400 hover:text-green-700 bg-white shadow text-md active:translate-y-[1px]"
       >
         <PlusIcon class="w-5 h-5" />
@@ -46,11 +47,12 @@ import DropdownMenu from "./utils/DropdownMenu.vue";
 
 export default {
   emits: [
-    "navMenuOpen"
+    "navMenuOpen",
+    "modalOpen"
   ],
   props: {
     title: String
-  },  
+  },
   components: {
     MenuIcon,
     PlusIcon,

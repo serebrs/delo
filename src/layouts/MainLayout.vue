@@ -3,7 +3,9 @@
     class="bg-gray-100 dark:bg-gray-800 h-screen overflow-y-hidden overflow-x-auto relative flex items-start justify-start flex-nowrap"
   >
     <!-- Основной блок слева с навигационным меню -->
-    <div class="flex-none h-screen hidden lg:block lg:w-28 shadow-lg bg-gray-700 shadow-gray-500 select-none">
+    <div
+      class="flex-none h-screen hidden lg:block lg:w-28 shadow-lg bg-gray-700 shadow-gray-500 select-none"
+    >
       <LogoImage />
       <NavigationMenu :navLinks="navLinks" />
     </div>
@@ -21,16 +23,22 @@
         >
           <XIcon class="h-5 w-5" />
         </a>
-        <NavigationMenu :navLinks="navLinks" @navMenuClose="this.isNavigationActive = false" />
+        <NavigationMenu :navLinks="navLinks" @navMenuClose="isNavigationActive = false" />
       </div>
     </Transition>
 
     <!-- Основной блок справа с заголовком и основным контентом -->
     <div class="flex-grow shrink-0 w-[58rem]">
-      <HeaderBar :title="title" @navMenuOpen="this.isNavigationActive = true" />
+      <HeaderBar
+        :title="title"
+        @navMenuOpen="isNavigationActive = true"
+        @modalOpen="isModalActive = true"
+      />
       <router-view />
     </div>
   </div>
+
+  <ModalBox v-if="isModalActive" @modalClose="isModalActive = false" />
 </template>
 
 <script>
@@ -38,6 +46,7 @@ import NavigationMenu from "@/components/NavigationMenu.vue";
 import HeaderBar from "@/components/HeaderBar.vue";
 import LogoImage from "@/components/LogoImage.vue";
 import { XIcon } from "@heroicons/vue/solid"; // TODO сделать импорт всех иконок глобально: Solid и Outline
+import ModalBox from "@/components/utils/ModalBox.vue";
 
 export default {
   data() {
@@ -47,7 +56,8 @@ export default {
         { id: "2", title: "Задачи", url: "/tasks", icon: { type: "solid", name: "ClipboardCheckIcon" } },
         { id: "3", title: "Статистика", url: "/stats", icon: { type: "solid", name: "ChartSquareBarIcon" } },
       ],
-      isNavigationActive: false
+      isNavigationActive: false,
+      isModalActive: false
     }
   },
   computed: {
@@ -56,7 +66,7 @@ export default {
     }
   },
   components: {
-    NavigationMenu, HeaderBar, LogoImage, XIcon
+    NavigationMenu, HeaderBar, LogoImage, XIcon, ModalBox
   }
 }
 </script>
