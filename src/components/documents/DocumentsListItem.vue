@@ -17,10 +17,10 @@
     </td>
     <td class="px-3 py-2 whitespace-nowrap text-sm text-slate-500">
       <div class="flex flex-row justify-between items-center">
-        <a href="#" class="p-1 hover:text-amber-600 hover:bg-sky-200 rounded-md">
+        <a href="#" class="p-1 hover:text-blue-600 hover:bg-sky-200 rounded-md">
           <SwitchVerticalIcon class="h-5 w-5" />
         </a>
-        <a href="#" class="p-1 hover:text-blue-600 hover:bg-sky-200 rounded-md">
+        <a href="#" class="p-1 hover:text-amber-600 hover:bg-sky-200 rounded-md">
           <PencilIcon class="h-5 w-5" />
         </a>
         <a href="#" class="p-1 hover:text-red-600 hover:bg-sky-200 rounded-md">
@@ -41,7 +41,7 @@ export default {
   },
   data() {
     return {
-
+      
     }
   },
   computed: {

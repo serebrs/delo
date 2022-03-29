@@ -1,5 +1,5 @@
 <template>
-  <div class="relative py-1" @click="isActive=true" @mouseleave="isActive=false">
+  <div class="relative py-1" @click="isActive = true" @mouseleave="isActive = false">
     <slot />
     <transition name="drop">
       <div
@@ -9,31 +9,35 @@
         aria-labelledby="options-menu"
         v-show="isActive"
       >
-        <a
-          href="#"
-          class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900"
-          role="menuitem"
-        >
-          <div class="flex flex-row justify-start items-center">
-            <div class="flex-none w-6">
-              <UserIcon class="w-4 h-4" />
+        <router-link to="/login">
+          <a
+            href="#"
+            class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900"
+            role="menuitem"
+          >
+            <div class="flex flex-row justify-start items-center">
+              <div class="flex-none w-6">
+                <UserIcon class="w-4 h-4" />
+              </div>
+              <div class="grow">Профиль</div>
             </div>
-            <div class="grow">Профиль</div>
-          </div>
-        </a>
-
-        <a
-          href="#"
-          class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900"
-          role="menuitem"
-        >
-          <div class="flex flex-row justify-start items-center">
-            <div class="flex-none w-6 justify-center items-center">
-              <LogoutIcon class="w-4 h-4" />
+          </a>
+        </router-link>
+        
+        <router-link to="/logout">
+          <a
+            href="#"
+            class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900"
+            role="menuitem"
+          >
+            <div class="flex flex-row justify-start items-center">
+              <div class="flex-none w-6 justify-center items-center">
+                <LogoutIcon class="w-4 h-4" />
+              </div>
+              <div class="grow">Выйти</div>
             </div>
-            <div class="grow">Выйти</div>
-          </div>
-        </a>
+          </a>
+        </router-link>
       </div>
     </transition>
   </div>
